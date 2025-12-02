@@ -11,7 +11,7 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 - Check-in e check-out de crianças
 - Atualização de status
 - Alerta de retirada não autorizada
-- Envio de eventos para filas do RabbitMQ
+- Envio* de eventos para filas do RabbitMQ
 - Serviço de e-mail que consome eventos e simula envio de notificações
 
 ---
@@ -41,7 +41,7 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 
 - ** Painel Admin:** http://localhost:3000
 - ** RabbitMQ:** http://localhost:15672 (login: guest / guest)
-- ** Email Service:** porta configurada no ```docker-compose.yml```
+- ** Email Service:** porta configurada no `docker-compose.yml`
 
 ---
 
@@ -49,13 +49,13 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 
 O serviço de e-mail **(EmailEventListener)** consome eventos das filas:
 
-- ```child.checkedin```
-- ```child.checkedout```
-- ```status.updated```
-- ```unauthorized.pickup```
+- `child.checkedin`
+- `child.checkedout`
+- `status.updated`
+- `unauthorized.pickup`
 
 Ao receber um evento, ele imprime no console mensagens como:
    
-   ```Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}```
-   ```[EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}```
+Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
+[EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
    
