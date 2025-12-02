@@ -55,7 +55,7 @@ O serviço de e-mail **(EmailEventListener)** consome eventos das filas:
 - `unauthorized.pickup`
 
 Ao receber um evento, ele imprime no console mensagens como:
-   
-Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
-[EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
+   ```txt
+   Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
+   [EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
    
