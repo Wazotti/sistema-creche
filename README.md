@@ -52,6 +52,8 @@ O serviço de e-mail (EmailEventListener) consome eventos das filas:- child.chec
 - `status.updated`
 - `unauthorized.pickup`
 
+---
+
 ## 🛠 Tecnologias Utilizadas- Node.js + Express
 
 - Spring Boot
