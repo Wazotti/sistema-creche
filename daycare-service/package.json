@@ -1,0 +1,16 @@
+{
+  "name": "daycare-service",
+  "version": "1.0.0",
+  "description": "Serviço de gerenciamento de eventos do Daycare integrado com RabbitMQ e Email-Service",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Maria",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

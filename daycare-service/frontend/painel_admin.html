@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel Admin — Daycare</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg">
+
+  <header class="topbar">
+    <div class="brand">DAYCARE<span class="accent">.</span>SERVICE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <button id="logoutBtn" class="btn btn-outline">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container admin">
+
+    <!-- Seção de Login (controlada pelo script) -->
+    <section id="loginSection">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button type="submit">Entrar no Painel</button>
+      </form>
+    </section>
+
+    <!-- Seção do Painel (fica oculta até login) -->
+    <section id="dashboardSection" class="d-none">
+      <h2>Painel Admin</h2>
+      <p id="welcomeAdmin">Bem-vinda(o)!</p>
+
+      <!-- Botões principais -->
+      <section class="controls" style="display:flex; gap:8px; margin-bottom:16px;">
+        <button id="btnNovaTurma" class="btn btn-primary">+ Nova Turma</button>
+        <button id="btnAdicionarCrianca" class="btn btn-secondary">+ Adicionar Criança</button>
+      </section>
+
+      <!-- Filtros -->
+      <section class="filters" style="display:flex; gap:8px; margin-bottom:16px;">
+        <select id="classSelect">
+          <option value="">Selecione a Turma...</option>
+        </select>
+        <input type="text" id="searchChild" placeholder="Pesquisar nome...">
+      </section>
+
+      <!-- Tabela de crianças -->
+      <section>
+        <h3>Crianças cadastradas</h3>
+        <div id="childrenList" class="list"></div>
+        <table class="table" style="width:100%; margin-top:12px;">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Turma</th>
+              <th>Autorizados</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="childrenBody">
+            <!-- Exemplo de linha dinâmica (será gerada via script.js) -->
+            <!--
+            <tr>
+              <td>Maria Clara</td>
+              <td>A1</td>
+              <td>Rita, Rito</td>
+              <td>
+                <button onclick="editarCrianca(1)">Editar</button>
+                <button onclick="deletarCrianca(1)">Excluir</button>
+              </td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+        <div id="emptyState" class="text-muted">Nenhuma criança cadastrada.</div>
+      </section>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
