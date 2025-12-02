@@ -57,7 +57,7 @@ O **Sistema de Creche** é uma aplicação para gestão de creches, permitindo o
    ```bash
    npm start
 
-4. - **O painel estará disponível em:** http://localhost:3004
+4. **O painel estará disponível em:** http://localhost:3004
 
 ## 🐳 Como rodar com Docker
 
