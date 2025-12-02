@@ -43,6 +43,8 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 - ** RabbitMQ:** http://localhost:15672 (login: guest / guest)
 - ** Email Service:** porta configurada no ```docker-compose.yml```
 
+---
+
 ## 📬 Simulação de E-mail
 
 O serviço de e-mail **(EmailEventListener)** consome eventos das filas:
@@ -53,7 +55,7 @@ O serviço de e-mail **(EmailEventListener)** consome eventos das filas:
 - ```unauthorized.pickup```
 
 Ao receber um evento, ele imprime no console mensagens como:
-   ```bash
-   Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
-   [EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
-
+   
+   ```Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}```
+   ```[EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}```
+   
