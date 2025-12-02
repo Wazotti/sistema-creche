@@ -19,7 +19,8 @@ O **Sistema de Creche** é uma aplicação para gestão de creches, permitindo o
 ## 🛠 Tecnologias Utilizadas
 - Node.js + Express  
 - Spring Boot  
-- RabbitMQ  
+- RabbitMQ
+- PostgreSQL 
 - Docker & Docker Compose  
 - Lombok  
 - Maven  
@@ -37,7 +38,8 @@ O **Sistema de Creche** é uma aplicação para gestão de creches, permitindo o
 ---
 
 ## 🧱 Arquitetura
-- **Backend (Node.js + Express):** expõe APIs REST e publica eventos no RabbitMQ  
+- **Backend (Node.js + Express):** expõe APIs REST e publica eventos no RabbitMQ
+- **Banco de Dados (PostgreSQL):** armazena informações de crianças, responsáveis e eventos  
 - **Mensageria (RabbitMQ):** gerencia filas de eventos  
 - **Email Service (Spring Boot):** consome mensagens das filas e simula envio de e-mails  
 - **Frontend:** painel administrativo simples para interação  
@@ -75,6 +77,7 @@ O **Sistema de Creche** é uma aplicação para gestão de creches, permitindo o
 - **Painel Admin:** http://localhost:3004
 - **RabbitMQ:** http://localhost:15672 (login: guest / guest)
 - **Email Service:** porta configurada no `docker-compose.ym`
+- **PostgreSQL:** rodando no container, acessível pela porta configurada no `docker-compose.yml`
 
 ---
 
