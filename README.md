@@ -39,7 +39,7 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 
 3. Acesse:
    
-- **Painel Admin:** http://localhost:3000
+- **Painel Admin:** http://localhost:3004
 - **RabbitMQ:** http://localhost:15672 (login: guest / guest)
 - **Email Service:** porta configurada no `docker-compose.ym`
 
