@@ -29,8 +29,31 @@ A arquitetura é baseada em **microserviços**, com **RabbitMQ** para mensageria
 ## 🐳 Como rodar com Docker
 
 1. Clone o repositório:
-   ```bash
+   ```
    git clone https://github.com/Wazotti/sistema-creche.git
    cd sistema-creche
 
-   
+2. Suba os serviços
+   ```bash
+   docker-compose up
+
+3. Acesse:
+
+- ** Painel Admin:** http://localhost:3000
+- ** RabbitMQ:** http://localhost:15672 (login: guest / guest)
+- ** Email Service:** porta configurada no ```docker-compose.yml```
+
+## 📬 Simulação de E-mail
+
+O serviço de e-mail **(EmailEventListener)** consome eventos das filas:
+
+- ```child.checkedin```
+- ```child.checkedout```
+- ```status.updated```
+- ```unauthorized.pickup```
+
+Ao receber um evento, ele imprime no console mensagens como:
+   ```bash
+   Recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
+   [EMAIL SIMULADO] Check-in recebido: ChildCheckedInEvent{id=1, nome='Maria Clara', turma='A1'}
+
